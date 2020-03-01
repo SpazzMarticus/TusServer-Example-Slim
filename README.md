@@ -1,6 +1,6 @@
 # TusServer + Slim v4
 
-This is a example using TusServer [`spazzmarticus/tus-server`](https://packagist.org/packages/spazzmarticus/tus-server) with the Slim v4 micro framework [`slim/slim`](https://packagist.org/packages/slim/slim).
+Example project using TusServer [`spazzmarticus/tus-server`](https://packagist.org/packages/spazzmarticus/tus-server) with the Slim v4 micro framework [`slim/slim`](https://packagist.org/packages/slim/slim).
 
 ## Run
 
