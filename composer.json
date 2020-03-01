@@ -1,0 +1,20 @@
+{
+    "name": "spazzmarticus/tus-servererver-example-slim",
+    "description": "SpazzMarticus/TusServer - Example using the Slim v4 micro framework",
+    "type": "project",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "SpazzMarticus",
+            "email": "SpazzMarticus@users.noreply.github.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "cache/cache": "^1.0",
+        "php-di/php-di": "^6.0",
+        "slim/psr7": "^1.0",
+        "slim/slim": "^4.4",
+        "symfony/event-dispatcher": "^5.0"
+    }
+}
