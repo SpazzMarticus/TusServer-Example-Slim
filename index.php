@@ -59,6 +59,7 @@ $tus = new TusServer(
     $container->get(FilenameFactoryInterface::class),
     $container->get(LocationProviderInterface::class),
 );
+$tus->setAllowGetCalls(true);
 
 $app->any('/upload/[{id}]', $tus);
 
