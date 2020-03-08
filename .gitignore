@@ -1,5 +1,7 @@
 composer.lock
 php_error.log
 storage/*
+!storage/.gitkeep
 uploads/*
+!uploads/.gitkeep
 vendor/

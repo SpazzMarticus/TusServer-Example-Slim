@@ -63,4 +63,24 @@ $tus->setAllowGetCalls(true);
 
 $app->any('/upload/[{id}]', $tus);
 
+$app->get('/reset', function (Request $request, Response $response) {
+    /**
+     * https://stackoverflow.com/a/24563703 - Deleting all files from a folder using PHP?
+     * @param string $dir Directory to delete files from
+     */
+    $emptyDirectories = function (string $dir) use (&$emptyDirectories): void {
+        $it = new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS);
+        $files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
+        foreach ($files as $file) {
+            if ($file->getFilename()[0] === '.') {
+                continue;
+            }
+            $file->isDir() ?  $emptyDirectories($file) : unlink($file);
+        }
+    };
+    $emptyDirectories(__DIR__ . '/uploads/');
+    $emptyDirectories(__DIR__ . '/storage/');
+    return $response->withHeader('Location', '/');
+});
+
 $app->run();
