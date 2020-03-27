@@ -27,7 +27,6 @@ ini_set("error_log", __DIR__ . '/php_error.log');
 error_reporting(E_ALL);
 
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/../tus2/vendor/autoload.php';
 
 $container = new Container();
 
