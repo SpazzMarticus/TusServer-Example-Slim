@@ -15,7 +15,7 @@
         "php-di/php-di": "^6.0",
         "slim/psr7": "^1.0",
         "slim/slim": "^4.4",
-        "spazzmarticus/tus-server": "^0.1.0",
+        "spazzmarticus/tus-server": "^0.2.2",
         "symfony/event-dispatcher": "^5.0"
     }
 }
