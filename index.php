@@ -60,7 +60,7 @@ $tus = new TusServer(
 );
 $tus->setAllowGetCalls(true);
 
-$app->any('/upload/[{id}]', $tus);
+$app->any('/upload[/{id}]', $tus);
 
 $app->get('/reset', function (Request $request, Response $response) {
     /**
